@@ -10,12 +10,24 @@ Create an array of strings called `colors` that contain "orange", "red", "yellow
 
 Then, using array subscripting and string interpolation, print out the String `"orange, yellow, and lavender are some of my favorite colors"`.
 
+var colors = ["orange", "red", "yellow", "turquoise", "lavander"]
+print("\(colors[0]), \(colors[2]), \(colors[4]) are some of my favorite colors.")
+
+// Prints "orange, yellow, lavander, are some of my favorite colors."
 
 ## Question 2
 
 Remove "Illinois" and "Kansas" from the array below.
 
 `var westernStates = ["California", "Oregon", "Washington", "Idaho", "Illinois", "Kansas"]`
+___________________________
+Answer:
+var westernStates = ["California", "Oregon", "Washington", "Idaho", "Illinois", "Kansas"]
+westernStates.remove(at: westernStates.count - 1)
+westernStates.remove(at: westernStates.count - 1)
+print(westernStates)  
+
+// Prints: ["California", "Oregon", "Washington", "Idaho"]
 
 
 ## Question 3
@@ -23,6 +35,26 @@ Remove "Illinois" and "Kansas" from the array below.
 Iterate through the array below. For each state, print out the name of the state, a colon, and whether it is or is not **in the continental United States.**
 
 `let moreStates = ["Hawaii", "New Mexico", "Alaska", "Montana", "Texas", "New York", "Florida"]`
+_______________________
+Answer:
+let moreStates = ["Hawaii", "New Mexico", "Alaska", "Montana", "Texas", "New York", "Florida"]
+
+for state in moreStates {
+    if state == moreStates[0] {
+    print("\(state): is NOT in the continental United States")
+} else {
+    print("\(state): is in the continental United States")
+}
+}
+// Prints:
+Hawaii: is not in the continental United States
+New Mexico: is in the continental United States
+Alaska: is in the continental United States
+Montana: is in the continental United States
+Texas: is in the continental United States
+New York: is in the continental United States
+Florida: is in the continental United States
+
 
 
 ## Question 4
@@ -55,7 +87,27 @@ The below array represents an unfinished batting lineup for a baseball team. **Y
 - Put "Reyes" to bat 8th instead.
 
 `var battingLineup = ["Reyes", "Jeter", "Ramirez", "Pujols","Griffey","Thomas","Jones", "Rodriguez"]`
+__________________________________________________________
+Answer:
+let myString = "This is good practice with Strings!"
 
+print(myString.count)
+print(myString.contains(" "))
+
+var battingLineup = ["Reyes", "Jeter", "Ramirez", "Pujols","Griffey","Thomas","Jones", "Rodriguez"]
+
+battingLineup.append("Suzuki")
+battingLineup[1] = "Tejada"
+battingLineup[5] = "Guerrero"
+
+print(battingLineup)
+let removeReyes = battingLineup.removeFirst()
+
+battingLineup.insert(removeReyes, at: 7)
+print(battingLineup)
+
+// Prints
+["Tejada", "Ramirez", "Pujols", "Griffey", "Guerrero", "Jones", "Rodriguez", "Reyes", "Suzuki"]
 
 ## Question 7
 
